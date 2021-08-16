@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\C++\Personal\Project19-STL deque\Project19-STL deque\main.cpp(143,17): warning C4018: “<”: 有符号/无符号不匹配
+D:\C++\Personal\Project19-STL deque\Project19-STL deque\main.cpp(149,17): warning C4018: “<”: 有符号/无符号不匹配
+  Project19-STL deque.vcxproj -> D:\C++\Personal\Project19-STL deque\Debug\Project19-STL deque.exe
