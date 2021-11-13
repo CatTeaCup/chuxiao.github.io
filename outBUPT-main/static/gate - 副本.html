@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://service.bupt.edu.cn/v2/matter/m_start?id=568 -->
+<html lang="en" style="font-size: 96px;">
+<!--字体为英文，字号为96px-->
+<head>
+<!--<head>到</head>之间是网页的头部，在这个里面可以放<title>(网页的标题）和<meta>（标签，有很大的用途，比喻网页的定时跳转，进入、离开时的特效，都是通过它来完成的)-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!--meta标签中的http-equiv属性可以设置很多，比如Content-Type就是设置页面使用的字符集，X-UA-Compatible定义浏览器的渲染方式，默认被Chrome内核渲染，没有的话会渲染至该浏览器的最高版本；还可以定义多少秒之后关闭或者刷新网页等属性-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+	<!--使用 name 属性来定义一个 HTML 文档的描述、关键词、作者。可以定义多个，描述此文档谁做的等等-->
+
+    <title>请假外出、返校权限查询通行码</title>
+
+    <script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>   
+		<!--script的src是用来调用外部文件的，调用js、css等文件-->
+		<!--分别是jquery库文件和qrcode插件-->
+
+    <script>
+	<!--window.onload() 通常用于 <body> 元素，在页面完全载入后(包括图片、css文件等等)执行脚本代码。当不止要执行一个函数，使用function(){}把要执行的函数括号括起来-->
+    window.onload = function () {
+		
+		<!--对应上面的src引用的js文件，生成二维码，为jquery-qrcode方法-->
+		<!--在后面页面中需要显示二维码的地方加入以下代码：<div id="qr_div"></div>-->
+        $('#qr_div').qrcode({
+            render: "canvas",  <!--渲染方式，默认canvas,还有table-->
+            text: "通过",
+            width: 150,
+            height: 150,
+            foreground: "#00B400",
+            background: "#FFF",  <!--背景颜色>
+        });
+		
+		<!--上面的qr_div属性是产生二维码，在下面特定的位置放置二维码即可。而gate_time属性是产生时间，用于显示出入校时间，获取现在的时间，调用下面的function getdate()函数-->
+        $('#gate_time').text(getdate());
+		<!--console.log() 方法用于在控制台输出信息。在测试该方法的过程中，控制台需要可见 (浏览器按下 F12 打开控制台)。-->
+        console.log(getdate());
+
+    }
+
+    function getdate() {
+        var now = new Date(),
+            y = now.getFullYear(),
+            m = now.getMonth() + 1,
+            d = now.getDate();
+        return y + "-" + (m < 10 ? "0" + m : m) + "-" + (d < 10 ? "0" + d : d) + " " + now.toTimeString().substr(0, 8);
+    }
+	<!--以下JS函数用于获取url参数-->
+    function getQueryVariable(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+                var pair = vars[i].split("=");
+                if(pair[0] == variable){return decodeURIComponent(pair[1]);}
+        }
+        return(null);
+    }
+
+</script>
+	
+	<!--link为连接外部元素，其中href 属性规定被链接文档的位置（URL），rel 属性规定当前文档与被链接文档之间的关系。-->
+    <link href="app.30e42e7343f9f05824ff.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://imgservice.bupt.edu.cn/all/1/3333.jpg">
+	<!--Stylesheet – 定义一个外部加载的样式表;shortcut icon -给网页标题前添加一个小图标(就是标签页前面的图标)-->
+	
+    <link rel="stylesheet" type="text/css" href="chunk-0b7ba362.f62785993292a3f36667.css">
+</head>
+
+<body class="site_mobile_common" data-new-gr-c-s-check-loaded="14.1025.0" data-gr-ext-installed="">
+<!--class给body样式，但是一般初始化的样式不直接写在这里。body 元素定义文档的主体。body 元素包含文档的所有内容（比如文本、超链接、图像、表格和列表等等。）-->
+<!--<div> 可定义文档中的分区或节（division/section）。
+<div> 标签可以把文档分割为独立的、不同的部分。它可以用作严格的组织工具，并且不使用任何格式与其关联。
+如果用 id 或 class 来标记 <div>，那么该标签的作用会变得更加有效。-->
+<div id="wxform"><!---->
+    <div class="forms">
+	<!--div一般具有class与id两个属性，其中id在css代码中是以“#”井号符号开头命名的类，而class在css代码中是以“.”小写句号符号命名开头的类.class后面的""为自己命名的-->
+        <div style="height: 0px;"></div>
+		<!--为表单的最上面，白底前面带小图标的部分，小图标调用表单.svg来显示-->
+        <div class="toptabla">
+            <div class="toptabla_con">
+                <div class="formsTop_left"><img src="表单.svg"></img>
+                    <p class="">请假外出、返校权限查询</p></div> <!----></div>
+        </div>
+		<!--为除了白底前面带小图标的剩余部分，包含姓名、学院等信息-->
+        <div>
+            <div element-loading-custom-class="area-vloading" class="m_formList"><!---->
+				<!--姓名模块（div模块）-->
+                <div class="">
+					<!--前面的文字：姓名-->
+                    <div class="pluginnames"><span
+                            style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">姓名</span>
+                        <!----></div> <!---->
+					<!--后面显示的部分-->
+                    <div class="plugin-allbox">
+                        <div data-key="User_3" class="dplugin-box"
+                             style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
+                            <div class="dplugin-mobile dplugin-doneplugin dplugin-mobile-dinput"><span
+                                    class="doneplugin-value doneplugin-value-userview"
+                                    style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 15px; letter-spacing: 0px;">
+						<script>
+                            document.write(getQueryVariable("name"));
+                        </script>
+					</span></div>
+                        </div> <!---->
+					</div>
+					
+                </div><!---->
+				<!--姓名模块结束-->
+				<!--缩进好像并没有什么影响，就是为了好看，写完一行div回车会自动缩进-->
+                <div class="">
+                    <div class="pluginnames"><span
+                            style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">学院</span>
+                        <!----></div> <!---->
+                    <div class="plugin-allbox">
+                        <div data-key="User_22" class="dplugin-box"
+                             style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
+                            <div class="dplugin-mobile dplugin-doneplugin dplugin-mobile-dinput"><span
+                                    class="doneplugin-value doneplugin-value-userview"
+                                    style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 15px; letter-spacing: 0px;">
+                                    <script>
+                                        document.write(getQueryVariable("institution"));
+                                    </script>
+					</span></div>
+                        </div> <!----></div>
+                </div><!---->
+                <div class="mobile_pluginnames_hide">
+                    <div class="pluginnames"><span
+                            style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">动态图</span>
+                        <!----></div> <!---->
+                    <div class="plugin-allbox">
+                        <div data-key="Image_36" class="dplugin-box"
+                             style="margin-top: 0px; margin-bottom: 0px; text-align: left;">
+                            <div class="dplugin-mobile dplugin-mobile-dImage dImageview"><img
+                                    src="3916676.gif" style="width: 100%; height: 100%;"></div>
+                            <!----> <!----></div> <!----></div>
+                </div>
+                <div class="">
+                    <div class="pluginnames"><span
+                            style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">状态码</span>
+                        <!----></div> <!---->
+                    <div class="plugin-allbox" plugin="[object Object]">
+                        <div data-key="Qrcode_11" class="dplugin-box" id="qr_div"
+                             style="margin-top: 0px; margin-bottom: 0px; width: 100%; text-align: center; height: 100%; overflow-x: auto;">
+                            <div class="dplugin-mobile">
+
+                            </div>
+                        </div> <!----></div>
+                </div>
+                <div class="">
+                    <div class="pluginnames"><span
+                            style="color: rgb(135, 135, 135); font-size: 18px; font-family: 微软雅黑; line-height: 22px;">状态</span>
+                        <!----></div> <!---->
+                    <div class="plugin-allbox">
+                        <div data-key="Input_12" class="dplugin-box"
+                             style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
+                            <div class="dplugin-mobile dplugin-mobile-dinput dinput-vie dplugin-mobile-dinput-focusalert"
+                                 style="font-size: 18px; font-family: 微软雅黑; font-weight: bold; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px;">
+                                <span style="font-size: 18px; font-family: 微软雅黑; font-weight: bold; font-style: normal; color: rgb(0, 120, 20); text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px;">允许入校</span>
+                            </div>
+                        </div> <!----></div>
+                </div>
+                <div class="">
+                    <div class="pluginnames"><span
+                            style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">学工号</span>
+                        <!----></div> <!---->
+                    <div class="plugin-allbox">
+                        <div data-key="User_5" class="dplugin-box"
+                             style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
+                            <div class="dplugin-mobile dplugin-doneplugin dplugin-mobile-dinput"><span
+                                    class="doneplugin-value doneplugin-value-userview"
+                                    style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 15px; letter-spacing: 0px;">
+                                    <script>
+                                        document.write(getQueryVariable("id"));
+                                    </script>
+					</span></div>
+                        </div> <!----></div>
+                </div><!---->
+                <div class="">
+                    <div class="pluginnames"><span
+                            style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">出入校时间</span>
+                        <!----></div> <!---->
+                    <div class="plugin-allbox">
+                        <div data-key="Calendar_15" class="dplugin-box"
+                             style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
+                            <div class="dplugin-mobile dplugin-mobile-dCalendar dCalendar-vie"
+                                 style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px;">
+                                <span id="gate_time" style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px;">2021-08-10 15:06:48</span>
+                            </div>
+                        </div> <!----></div>
+                </div><!---->
+
+            </div> <!----></div>
+        <div class="wxformbtn m_start_btn">
+            <button class="draftdiv active">更多</button>
+            <div class="wxformbtn_center"><!----></div> <!----></div>
+    </div>
+</div>
+
+
+<script src="signature_pad.min.js.下载" data-id="9ea1316a58bf6f41ac212b3b8fa833c3"
+        type="text/javascript" data-path="js/signature_pad.min.js" source-type="other"
+        page-path="/matter/m_start"></script>
+</body>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+</html>
+
+<!--div的class用来定义这个对象的样式的，比如，高宽、字体、边框、颜色、背景等等。你可以直接把样式写在这个对象里，但版面会很乱，而且要修改时很麻烦，不能共用，使用class可以使多个不同的对象拥有相同的外观样式。
+故而人们把很多样式预先定义好，放在一个形如abc.css的文件中，然后在页面中根据需要使用其中已定义好的样式，这就是class。class告诉浏览器当前的对象使用的是哪个样式。-->

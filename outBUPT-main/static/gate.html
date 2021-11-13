@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://service.bupt.edu.cn/v2/matter/m_start?id=568 -->
+<html lang="en" style="font-size: 96px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+
+    <title>请假外出、返校权限查询通行码</title>
+
+    <script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>    
+
+    <script>
+    window.onload = function () {
+
+        $('#qr_div').qrcode({
+            render: "canvas",
+            text: "通过",
+            width: 150,
+            height: 150,
+            foreground: "#00B400",
+            background: "#FFF",
+        });
+
+        $('#gate_time').text(getdate());
+        console.log(getdate());
+
+    }
+
+    function getdate() {
+        var now = new Date(),
+            y = now.getFullYear(),
+            m = now.getMonth() + 1,
+            d = now.getDate();
+        return y + "-" + (m < 10 ? "0" + m : m) + "-" + (d < 10 ? "0" + d : d) + " " + now.toTimeString().substr(0, 8);
+    }
+    function getQueryVariable(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+                var pair = vars[i].split("=");
+                if(pair[0] == variable){return decodeURIComponent(pair[1]);}
+        }
+        return(null);
+    }
+
+</script>
+
+    <link href="app.30e42e7343f9f05824ff.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://imgservice.bupt.edu.cn/all/1/3333.jpg">
+
+    <link rel="stylesheet" type="text/css" href="chunk-0b7ba362.f62785993292a3f36667.css">
+</head>
+<body class="site_mobile_common" data-new-gr-c-s-check-loaded="14.1025.0" data-gr-ext-installed="">
+<div id="wxform"><!---->
+    <div class="forms">
+        <div style="height: 0px;"></div>
+		
+		<div class="toptabla">
+            <div class="toptabla_con">
+                <div class="formsTop_left"><img src="表单.svg"></img>
+                    <p class="">当前部门：信息与通信工程学院</p></div> <!----></div>
+        </div>
+        <div class="toptabla">
+            <div class="toptabla_con">
+                <div class="formsTop_left"><img src="表单.svg"></img>
+                    <p class="">请假外出、返校权限查询</p></div> <!----></div>
+        </div>
+		
+        <div>
+            <div element-loading-custom-class="area-vloading" class="m_formList"><!---->
+                <div class="">
+                    <div class="pluginnames"><span
+                            style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">姓名</span>
+                        <!----></div> <!---->
+                    <div class="plugin-allbox">
+                        <div data-key="User_3" class="dplugin-box"
+                             style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
+                            <div class="dplugin-mobile dplugin-doneplugin dplugin-mobile-dinput"><span
+                                    class="doneplugin-value doneplugin-value-userview"
+                                    style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 15px; letter-spacing: 0px;">
+						<script>
+                            document.write(getQueryVariable("name"));
+                        </script>
+					</span></div>
+                        </div> <!----></div>
+                </div><!---->
+				
+				<!--
+                <div class="">
+                    <div class="pluginnames"><span
+                            style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">学院</span>
+                        </div> 
+                    <div class="plugin-allbox">
+                        <div data-key="User_22" class="dplugin-box"
+                             style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
+                            <div class="dplugin-mobile dplugin-doneplugin dplugin-mobile-dinput"><span
+                                    class="doneplugin-value doneplugin-value-userview"
+                                    style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 15px; letter-spacing: 0px;">
+                                    <script>
+                                        document.write(getQueryVariable("institution"));
+                                    </script>
+					</span></div>
+                        </div> </div>
+                </div>
+				-->
+				
+				<div class="">
+                    <div class="pluginnames"><span
+                            style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">照片</span>
+                        <!----></div> <!---->
+					<div class="plugin-allbox" plugin="[object Object]">	
+						<div class="dplugin-mobile dplugin-mobile-dImage dImageview" align="center"><img
+                                    src="20211112164658.jpg" style="width: 100px; height: 100px;"></div>
+							<div class="dplugin-mobile">
+							</div>
+                </div>
+                <div class="mobile_pluginnames_hide">
+                    <!--<div class="pluginnames"><span
+                            style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">动态图</span>
+                        </div>-->
+                    <div class="plugin-allbox">
+                        <div data-key="Image_36" class="dplugin-box"
+                             style="margin-top: 0px; margin-bottom: 0px; text-align: left;">
+                            <div class="dplugin-mobile dplugin-mobile-dImage dImageview"><img
+                                    src="3916676.gif" style="width: 100%; height: 100%;"></div>
+                            <!----> <!----></div> <!----></div>
+                </div>
+                <div class="">
+                    <div class="pluginnames"><span
+                            style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">状态码</span>
+                        <!----></div> <!---->
+                    <div class="plugin-allbox" plugin="[object Object]">
+                        <div data-key="Qrcode_11" class="dplugin-box" id="qr_div"
+                             style="margin-top: 0px; margin-bottom: 0px; width: 100%; text-align: center; height: 100%; overflow-x: auto;">
+                            <div class="dplugin-mobile">
+
+                            </div>
+                        </div> <!----></div>
+                </div>
+                <div class="">
+                    <div class="pluginnames"><span
+                            style="color: rgb(135, 135, 135); font-size: 18px; font-family: 微软雅黑; line-height: 22px;">状态</span>
+                        <!----></div> <!---->
+                    <div class="plugin-allbox">
+                        <div data-key="Input_12" class="dplugin-box"
+                             style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
+                            <div class="dplugin-mobile dplugin-mobile-dinput dinput-vie dplugin-mobile-dinput-focusalert"
+                                 style="font-size: 18px; font-family: 微软雅黑; font-weight: bold; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px;">
+                                <span style="font-size: 18px; font-family: 微软雅黑; font-weight: bold; font-style: normal; color: rgb(0, 120, 20); text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px;">允许入校</span>
+                            </div>
+                        </div> <!----></div>
+                </div>
+                <div class="">
+                    <div class="pluginnames"><span
+                            style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">学工号</span>
+                        <!----></div> <!---->
+                    <div class="plugin-allbox">
+                        <div data-key="User_5" class="dplugin-box"
+                             style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
+                            <div class="dplugin-mobile dplugin-doneplugin dplugin-mobile-dinput"><span
+                                    class="doneplugin-value doneplugin-value-userview"
+                                    style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 15px; letter-spacing: 0px;">
+                                    <script>
+                                        document.write(getQueryVariable("id"));
+                                    </script>
+					</span></div>
+                        </div> <!----></div>
+                </div><!---->
+                <div class="">
+                    <div class="pluginnames"><span
+                            style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px;">出入校时间</span>
+                        <!----></div> <!---->
+                    <div class="plugin-allbox">
+                        <div data-key="Calendar_15" class="dplugin-box"
+                             style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
+                            <div class="dplugin-mobile dplugin-mobile-dCalendar dCalendar-vie"
+                                 style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px;">
+                                <span id="gate_time" style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px;">2021-08-10 15:06:48</span>
+                            </div>
+                        </div> <!----></div>
+                </div><!---->
+
+            </div> <!----></div>
+        <div class="wxformbtn m_start_btn">
+            <button class="draftdiv active">更多</button>
+            <div class="wxformbtn_center"><!----></div> <!----></div>
+    </div>
+</div>
+
+
+<script src="signature_pad.min.js.下载" data-id="9ea1316a58bf6f41ac212b3b8fa833c3"
+        type="text/javascript" data-path="js/signature_pad.min.js" source-type="other"
+        page-path="/matter/m_start"></script>
+</body>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+</html>
